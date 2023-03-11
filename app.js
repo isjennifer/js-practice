@@ -10,7 +10,9 @@ function onLoginSubmit (event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
-    greeting.innerText = "Hello" + username;
+    //localStorage.setItem 을 사용하여 key: username, value: 사용자가 입력한 값 으로 저장시킴
+    localStorage.setItem("username", username)
+    greeting.innerText = "Hello " + username;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
