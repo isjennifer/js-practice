@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- 스크립트 태그의 위치별 차이점 : head 안에서 defer을 붙이면 html 파싱과 동시에 자바스크립트가 함께 다운로드 되고,
+    html 파싱이 끝나면 자바스크립트가 실행됨 -->
+    <script defer src="app.js"></script>
     <title>Momentum</title>
 </head>
 <body>
     <form id="login-form">
         <input required maxlength ="15" type="text" placeholder="what is your name?" />
         <button>Log In</button>
-        <script src="app.js"></script>
     </form>
+    <h1 id="greeting" class="hidden"></h1>
 </body>
 </htrequired maxlength ="15" ml>
