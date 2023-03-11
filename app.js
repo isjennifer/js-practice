@@ -24,6 +24,7 @@ function paintGreetings(username) {
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
+//localStorage에 값이 저장되었는지 아닌지 확인 -> 새로고침을 하면 다시 form을 보여줄지, greeting을 보여줄지 
 if (savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginSubmit)
