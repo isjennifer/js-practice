@@ -16,6 +16,9 @@ function deleteToDo(event) {
     // event.target.부모요소 로 찾아내서 버튼이 눌려진 li 특정
     const li = event.target.parentElement;
     li.remove();
+    // filter 함수를 사용하여 toDos 배열에서 우리가 클릭한 id를 가진 요소(li.id)를 지워서 toDos 배열을 업데이트함
+    toDos = toDos.filter(todo => todo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function paintToDo(newToDo) {
